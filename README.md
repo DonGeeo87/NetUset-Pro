@@ -59,6 +59,14 @@ adb install -r app/build/outputs/apk/debug/app-debug.apk
 - Unit tests (lógica y ViewModel): `./gradlew test`
 - UI tests (Compose, requiere emulador/dispositivo): `./gradlew connectedAndroidTest`
 - Build debug: `./gradlew assembleDebug`
+- Instalación en dispositivo: `./gradlew installDebug`
+
+## 📦 Release 1.0.2
+- Autenticación básica: pantalla de login con validación, snackbar de éxito/error y gating previo al listado.
+- Tests de autenticación:
+  - Unit: `AuthRepository`, `LoginViewModel`, `CredentialsValidator` (Mockito + coroutines).
+  - Instrumentation: flujo de login en UI (éxito, credenciales inválidas, validación de campos).
+- Tag: `v1.0.2` (12-12-2025).
 
 ## 📦 Release 1.0.1
 - Se añadieron tests de unidad (repositorio y ViewModel) y tests de UI Compose para lista, búsqueda y estado de error.

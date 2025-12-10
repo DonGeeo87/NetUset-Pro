@@ -1,5 +1,16 @@
 # 📜 Changelog
 
+## v1.0.2 — 2025-12-10
+### ✅ Added
+- 🧪 Tests de unidad para autenticación: `AuthRepository`, `LoginViewModel` y validador de credenciales (Mockito + coroutines).
+- 📱 Tests de instrumentación Compose para flujo de login: éxito, credenciales inválidas y validaciones en UI.
+- 🛡️ Pantalla de Login con validaciones, snackbar de éxito/error y flujo simple de autenticación.
+### 🧰 Changed
+- 🔢 Versión de app a 1.0.2 (versionCode 3).
+### ✅ QA
+- 🧪 `./gradlew test`
+- 📱 `./gradlew connectedAndroidTest`
+
 ## v1.0.1 — 2025-12-10
 ### ✅ Added
 - 🧪 Tests de unidad para `UserRepository` y `UserViewModel` (coroutines + flujos).

@@ -1,0 +1,29 @@
+# 📜 Changelog
+
+## v1.0.1 — 2025-12-10
+### ✅ Added
+- 🧪 Tests de unidad para `UserRepository` y `UserViewModel` (coroutines + flujos).
+- 📱 Tests de instrumentación Compose para la lista: carga, búsqueda y estado de error.
+### 🧰 Changed
+- 🔢 Versión de app a 1.0.1 (versionCode 2) con dependencias de coroutines.
+### ✅ QA
+- 🧪 `./gradlew test`
+- 📱 `./gradlew connectedAndroidTest`
+
+## v0.1.0 — 2025-12-10
+### ✨ Added
+- 🚀 MVP Android con Jetpack Compose + MVVM.
+- 🌐 Fetch REST `GET /users` (JSONPlaceholder) con Retrofit + Gson.
+- 📋 Listado con tarjetas, búsqueda local (nombre/email), estados de carga/error y pull-to-refresh.
+- 👤 Pantalla de detalle de usuario.
+- 🧭 Navegación Compose (list → detail).
+- 🎨 Theming Material 3 y componentes de estado (loading/error).
+- 📖 README con setup, dependencias y roadmap corto.
+
+### 🐛 Fixed
+- 🛡️ Crash inicial por falta de permiso `INTERNET` en el manifest.
+
+### ✅ QA
+- 🧹 `./gradlew lint`
+- 🏗️ `./gradlew assembleDebug`
+

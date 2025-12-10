@@ -55,13 +55,18 @@ adb install -r app/build/outputs/apk/debug/app-debug.apk
 - `INTERNET`
 
 ## 🧪 QA mínimo
-- `./gradlew lint`
-- `./gradlew assembleDebug`
+- Lint: `./gradlew lint`
+- Unit tests (lógica y ViewModel): `./gradlew test`
+- UI tests (Compose, requiere emulador/dispositivo): `./gradlew connectedAndroidTest`
+- Build debug: `./gradlew assembleDebug`
+
+## 📦 Release 1.0.1
+- Se añadieron tests de unidad (repositorio y ViewModel) y tests de UI Compose para lista, búsqueda y estado de error.
+- Tag: `v1.0.1` (12-12-2025).
 
 ## 🛣️ Roadmap corto
 - Migrar SwipeRefresh a `pullRefresh` (Compose Foundation).
 - Añadir cache local (Room).
-- Tests de repositorio y ViewModel con coroutines.
 
 ## 🧑‍💻 Autor
 Giorgio Interdonato — NetUsers Pro (Bootcamp Android)

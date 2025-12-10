@@ -1,5 +1,15 @@
 # 📜 Changelog
 
+## v1.0.3 — 2025-12-10
+### 🧰 Changed
+- 🔢 Versión de app a 1.0.3 (versionCode 4) y configuración de firma por propiedades locales.
+- 🛡️ Release con R8 + `shrinkResources` activado y reglas Proguard específicas para Retrofit/Gson/coroutines.
+- 📦 Configuración de `signingConfigs` en `build.gradle.kts` para soporte de keystore de release mediante `local.properties`.
+### ✅ QA
+- 🧪 `./gradlew assembleRelease` ejecutado exitosamente.
+- 📦 APK generado en `app/build/outputs/apk/release/app-release.apk`.
+- ✅ Firma verificada con `apksigner verify`.
+
 ## v1.0.2 — 2025-12-10
 ### ✅ Added
 - 🧪 Tests de unidad para autenticación: `AuthRepository`, `LoginViewModel` y validador de credenciales (Mockito + coroutines).

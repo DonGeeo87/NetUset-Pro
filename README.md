@@ -59,18 +59,26 @@ adb install -r app/build/outputs/apk/debug/app-debug.apk
 - Unit tests (lógica y ViewModel): `./gradlew test`
 - UI tests (Compose, requiere emulador/dispositivo): `./gradlew connectedAndroidTest`
 - Build debug: `./gradlew assembleDebug`
+- Build release: `./gradlew assembleRelease` (requiere keystore configurado en `local.properties`)
 - Instalación en dispositivo: `./gradlew installDebug`
+
+## 📦 Release 1.0.3
+- **Build de producción:** APK firmado con R8 + `shrinkResources` activado para optimización.
+- **Configuración de firma:** soporte para keystore de release mediante `local.properties` (RELEASE_STORE_FILE, RELEASE_STORE_PASSWORD, RELEASE_KEY_ALIAS, RELEASE_KEY_PASSWORD).
+- **Reglas Proguard:** configuradas para Retrofit/Gson, coroutines y Compose.
+- **Generación:** `./gradlew assembleRelease` genera `app/build/outputs/apk/release/app-release.apk`.
+- Tag: `v1.0.3` (10-12-2025).
 
 ## 📦 Release 1.0.2
 - Autenticación básica: pantalla de login con validación, snackbar de éxito/error y gating previo al listado.
 - Tests de autenticación:
   - Unit: `AuthRepository`, `LoginViewModel`, `CredentialsValidator` (Mockito + coroutines).
   - Instrumentation: flujo de login en UI (éxito, credenciales inválidas, validación de campos).
-- Tag: `v1.0.2` (12-12-2025).
+- Tag: `v1.0.2` (10-12-2025).
 
 ## 📦 Release 1.0.1
 - Se añadieron tests de unidad (repositorio y ViewModel) y tests de UI Compose para lista, búsqueda y estado de error.
-- Tag: `v1.0.1` (12-12-2025).
+- Tag: `v1.0.1` (10-12-2025).
 
 ## 🛣️ Roadmap corto
 - Migrar SwipeRefresh a `pullRefresh` (Compose Foundation).
